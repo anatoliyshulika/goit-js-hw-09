@@ -24,14 +24,27 @@
     <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Favicon -->
-    <title>Video playback</title>
-
+    <title>Promise generator</title>
 </head>
 
 <body>
     <p><a href="index.html">Go back</a></p>
-    <iframe id="vimeo-player" src="https://player.vimeo.com/video/236203659" width="640" height="360" frameborder="0"
-        allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+    <form class="form">
+        <label>
+            First delay (ms)
+            <input type="number" name="delay" required />
+        </label>
+        <label>
+            Delay step (ms)
+            <input type="number" name="step" required />
+        </label>
+        <label>
+            Amount
+            <input type="number" name="amount" required />
+        </label>
+        <button type="submit">Create promises</button>
+    </form>
 </body>
 
 </html>

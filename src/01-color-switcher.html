@@ -24,24 +24,15 @@
     <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Favicon -->
-    <title>Feedback form</title>
+    <title>Color switcher</title>
 </head>
 
 <body>
-    <p><a href="index.html">Go back</a></p>
-
-    <form class="feedback-form" autocomplete="off">
-        <label>
-            Email
-            <input type="email" name="email" autofocus />
-        </label>
-        <label>
-            Message
-            <textarea name="message" rows="8"></textarea>
-        </label>
-        <button type="submit">Submit</button>
-    </form>
-
+    <div class="container">
+        <p><a href="index.html">Go back</a></p>
+        <button class="btn" type="button" data-start>START</button>
+        <button class="btn" type="button" data-stop disabled>STOP</button>
+    </div>
 </body>
 
 </html>

@@ -24,15 +24,46 @@
     <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Favicon -->
-    <title>SimpleLightbox library</title>
+    <title>Countdown timer</title>
+
 </head>
 
 <body>
-    <p><a href="index.html">Go back</a></p>
+    <div class="upcont">
+        <p><a href="index.html">Go back</a></p>
 
-    <!-- Add gallery items to this list -->
-    <div class="gallery"></div>
+        <input type="text" id="datetime-picker" />
+        <button class="btn-start" type="button" data-start>START</button>
+        <button class="btn-start" type="button" data-reset>RESET</button>
+    </div>
 
+    <div class="timer">
+        <div class="field">
+            <span class="value" data-days>00</span>
+            <span class="label">DAYS</span>
+        </div>
+        <div class="field">
+            <span class="value" data-hours>00</span>
+            <span class="label">HOURS</span>
+        </div>
+        <div class="field">
+            <span class="value" data-minutes>00</span>
+            <span class="label">MINUTES</span>
+        </div>
+        <div class="field">
+            <span class="value" data-seconds>00</span>
+            <span class="label">SECONDS</span>
+        </div>
+    </div>
+    <div>
+        <p>
+            Здравствуйте. Я в этом задании немного расширил функционал относительно ТЗ.<br>
+            Прошу рассмотреть возможность такой реализации. <br>Дизэйбл на кнопке убирается так же когда меняется
+            значение в
+            инпуте.
+
+        </p>
+    </div>
 </body>
 
 </html>

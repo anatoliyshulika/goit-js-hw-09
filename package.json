@@ -29,10 +29,9 @@
     "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
-    "@vimeo/player": "^2.18.0",
     "autoprefixer": "10.4.5",
-    "lodash.throttle": "^4.1.1",
+    "flatpickr": "^4.6.13",
     "normalize.css": "^8.0.1",
-    "simplelightbox": "^2.10.4"
+    "notiflix": "^3.2.5"
   }
 }

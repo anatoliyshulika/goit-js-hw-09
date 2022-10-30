@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageminPlugin = require("imagemin-webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 
-let htmlPageNames = ["index", "01-gallery", "02-video", "03-feedback"];
+let htmlPageNames = ["index", "01-color-switcher", "02-timer", "03-promises"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files
@@ -19,9 +19,12 @@ let multipleHtmlPlugins = htmlPageNames.map((name) => {
 module.exports = {
   entry: {
     [htmlPageNames[0]]: path.resolve(__dirname, "./src/index.js"),
-    [htmlPageNames[1]]: path.resolve(__dirname, "./src/js/01-gallery.js"),
-    [htmlPageNames[2]]: path.resolve(__dirname, "./src/js/02-video.js"),
-    [htmlPageNames[3]]: path.resolve(__dirname, "./src/js/03-feedback.js"),
+    [htmlPageNames[1]]: path.resolve(
+      __dirname,
+      "./src/js/01-color-switcher.js"
+    ),
+    [htmlPageNames[2]]: path.resolve(__dirname, "./src/js/02-timer.js"),
+    [htmlPageNames[3]]: path.resolve(__dirname, "./src/js/03-promises.js"),
   },
 
   output: {
@@ -72,9 +75,9 @@ module.exports = {
       },
     }),
 
-    new CopyPlugin({
-      patterns: [{ from: "./src/js/jsCopyToDist" }],
-    }),
+    // new CopyPlugin({
+    //   patterns: [{ from: "./src/js/jsCopyToDist" }],
+    // }),
   ].concat(multipleHtmlPlugins),
 
   module: {
