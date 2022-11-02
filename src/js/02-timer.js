@@ -29,6 +29,14 @@ const calendar = datetimePickerRef.flatpickr({
   onClose(selectedDates) {},
 });
 
+// function getCurrentDate() {
+//   const date = new Date();
+//   const day = date.getDate();
+//   const month = date.getMonth() + 1;
+//   const year = date.getFullYear();
+//   return `${year}-${month}-${day}`;
+// }
+
 datetimePickerRef.addEventListener("input", toggleDisabledAttribute);
 
 function toggleDisabledAttribute() {
@@ -65,14 +73,6 @@ function resetTimer() {
   minutesFieldRef.textContent = "00";
   secondsFieldRef.textContent = "00";
   localStorage.removeItem("selected-date");
-}
-
-function getCurrentDate() {
-  const date = new Date();
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  return `${year}-${month}-${day}`;
 }
 
 function parseRestTime() {

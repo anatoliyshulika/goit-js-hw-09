@@ -9,11 +9,9 @@ const inputAmountRef = document.querySelector("[name='amount']");
 function startCreating(evt) {
   evt.preventDefault();
   let delay = parseInt(inputDelayRef.value);
-  inputDelayRef.value = "";
   const step = parseInt(inputStepRef.value);
-  inputStepRef.value = "";
   const amount = inputAmountRef.value;
-  inputAmountRef.value = "";
+  formRef.reset();
 
   for (let position = 1; position <= amount; position += 1) {
     createPromise(position, delay)
